@@ -65,7 +65,34 @@ namespace FunctionDemo2
 
 		static void StringFunctions()
 		{
+			Console.WriteLine("Some string functions");
+			string example = "crocodile";
+			string exampleUpperCase = example.ToUpper();
+			if (exampleUpperCase.StartsWith("CROC"))
+			{
+				Console.WriteLine("crocodile starts with croc");
+			}
 
+			Console.WriteLine("Input a string:");
+			string input = Console.ReadLine();
+			input = input.ToLower();
+			Console.WriteLine("Du skrev in: " + input);
+
+			Console.WriteLine("Please enter password:");
+			string password = Console.ReadLine().ToLower();
+			password = password.Trim();
+			if(password == "password")
+			{
+				Console.WriteLine("Correct password!");
+			}
+		}
+
+		static string ReadLineNicer()
+		{
+			string input = Console.ReadLine();
+			input = input.ToLower();
+			input = input.Trim();
+			return input;
 		}
 	}
 }
